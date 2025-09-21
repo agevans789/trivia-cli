@@ -58,15 +58,20 @@ function runGame(...triviaQuestions) {
                 console.log(`${index + 1}. ${choice}`);
             });
             // check that the user's answer is correct
+            let correctAnswers = 0;
             function checkAnswer(userAnswer, correctAnswer) {
                 let correctAnswer = triviaQuestion.answer;
                 if (userAnswer === correctAnswer) {
+                    correctAnswers++;
                     console.log("Correct!");
                 } else {
                     console.log("Incorrect. Correct answer is ${correctAnswer}");
                 };
             };
-        };
+        }; 
     };
+    function showFinalScore() {
+        console.log("Final score: correctAnswers")
+    }
 }
 
